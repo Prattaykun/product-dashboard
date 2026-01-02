@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
+
 export default function ProductList({ products, view }) {
+  const navigate = useNavigate();
+    // LIST VIEW
   if (view === "list") {
     return (
       <div className="overflow-x-auto bg-white rounded-xl shadow">
@@ -41,8 +46,9 @@ export default function ProductList({ products, view }) {
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
       {products.map(p => (
         <div
+            onClick={() => navigate(`/product/${p.id}`)} 
           key={p.id}
-          className="bg-white rounded-xl shadow hover:shadow-lg transition"
+          className="bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer"
         >
           <img
             src={p.image}

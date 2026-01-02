@@ -26,7 +26,7 @@ export default function ProductDetails({ products }) {
         onClick={() => navigate(-1)}
         className="mb-4 text-blue-600 underline"
       >
-        ← Back
+         Back
       </button>
 
       <div className="grid md:grid-cols-2 gap-6 bg-white p-6 shadow rounded">
